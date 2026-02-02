@@ -5,7 +5,7 @@ import { Heart } from 'lucide-react';
 
 export const DonationPortal = () => {
     return (
-        <div className="h-screen w-screen p-[20px] relative overflow-hidden flex flex-col">
+        <div className="fixed inset-0 h-[100dvh] w-screen p-[20px] relative overflow-hidden flex flex-col">
             {/* Background Ambience */}
             <div className="fixed inset-0 bg-gradient-to-br from-slate-900 via-red-900/20 to-slate-900 -z-20" />
 
