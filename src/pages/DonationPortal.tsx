@@ -2,10 +2,11 @@ import { GlassCard } from '../components/GlassCard';
 import { StepList } from '../components/StepList';
 import { motion } from 'framer-motion';
 import cruzRojaLogo from '../assets/cruz-roja.svg';
+import { Heart } from 'lucide-react';
 
 export const DonationPortal = () => {
     return (
-        <div className="fixed inset-0 h-[100dvh] w-screen p-[20px] relative overflow-hidden flex flex-col">
+        <div className="fixed inset-0 h-[100dvh] w-screen p-[20px] md:relative md:h-screen md:flex md:items-center md:justify-center overflow-hidden flex flex-col">
             {/* Background Ambience */}
             <div className="fixed inset-0 bg-gradient-to-br from-slate-900 via-red-900/20 to-slate-900 -z-20" />
 
@@ -28,7 +29,7 @@ export const DonationPortal = () => {
             />
 
             {/* Main Content */}
-            <GlassCard className="w-full h-full border-t border-white/30 flex flex-col p-4 md:p-8">
+            <GlassCard className="w-full h-full md:h-auto md:max-h-[85vh] md:max-w-2xl md:aspect-[3/4] border-t border-white/30 flex flex-col p-4 md:p-12 md:rounded-3xl shadow-2xl">
                 <div className="flex-1 flex flex-col h-full overflow-hidden">
 
                     {/* Header: Pegado Arriba */}
@@ -54,7 +55,7 @@ export const DonationPortal = () => {
 
                     {/* Body: Ocupa todo el espacio central disponible */}
                     <div className="flex-1 flex flex-col justify-between min-h-0 my-[1vh]">
-                        <p className="text-slate-900 font-bold text-center md:text-left shrink-0 text-[clamp(0.9rem,2vh,1.1rem)]">
+                        <p className="text-slate-900 font-bold text-center shrink-0 text-[clamp(0.9rem,2vh,1.1rem)]">
                             Sigue estos pasos para tu donativo:
                         </p>
 
@@ -67,14 +68,13 @@ export const DonationPortal = () => {
                     {/* Footer: Pegado Abajo */}
                     <div className="shrink-0 mt-[1vh]">
                         <motion.a
-                            href="https://www.cruzrojamexicana.org.mx/donacion/266"
+                            href="https://www.cruzrojamexicana.org.mx/donar/donativo?causaId=1"
                             target="_blank"
                             rel="noopener noreferrer"
-                            whileHover={{ scale: 1.02 }}
                             whileTap={{ scale: 0.98 }}
-                            className="block w-full text-center bg-gradient-to-r from-red-700 to-red-800 hover:from-red-600 hover:to-red-700 text-white font-bold rounded-xl shadow-lg shadow-red-900/50 transition-all tracking-wide border border-white/10
-                            py-[clamp(0.75rem,2vh,1.5rem)] text-[clamp(1rem,2.2vh,1.5rem)]"
+                            className="flex items-center justify-center w-full text-center bg-gradient-to-r from-red-700 to-red-800 text-white font-bold rounded-xl shadow-lg shadow-red-900/50 transition-all tracking-wide border border-white/10 py-[clamp(0.75rem,2vh,1.5rem)] text-[clamp(1rem,2.2vh,1.5rem)] active:scale-95 cursor-pointer gap-3"
                         >
+                            <Heart className="fill-white text-white w-[clamp(1.2rem,2.5vh,1.8rem)] h-[clamp(1.2rem,2.5vh,1.8rem)]" />
                             Ir a Donar
                         </motion.a>
 
@@ -82,8 +82,8 @@ export const DonationPortal = () => {
                             Tu donativo salva vidas. Gracias por ayudar.
                         </p>
                     </div>
-                </div >
-            </GlassCard>
-        </div>
+                </div>
+            </GlassCard >
+        </div >
     );
 };

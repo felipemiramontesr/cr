@@ -4,8 +4,8 @@ import { MapPin, User, CreditCard } from 'lucide-react';
 const steps = [
     {
         icon: MapPin,
-        title: "Sitio Web Nacional",
-        description: "Serás redirigido al portal oficial, pero primero verás un selector.",
+        title: "A continuación:",
+        description: "Serás redirigido al portal oficial, donde verás un selector.",
         highlight: true
     },
     {
@@ -23,13 +23,13 @@ const steps = [
     {
         icon: CreditCard,
         title: "Método de Pago",
-        description: "Elige tarjeta de crédito/débito o PayPal para finalizar."
+        description: "Elige el metodo de pago de tu preferencia."
     }
 ];
 
 export const StepList = () => {
     return (
-        <div className="flex flex-col justify-evenly h-full gap-[1vh] min-h-0 py-[1vh]">
+        <div className="flex flex-col justify-evenly h-full gap-[1vh] min-h-0 py-[1vh] md:py-4">
             {steps.map((step, index) => (
                 <motion.div
                     key={index}
