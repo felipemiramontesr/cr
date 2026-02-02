@@ -13,7 +13,7 @@ const steps = [
         title: "Selecciona: ZACATECAS",
         description: "Es CRUCIAL seleccionar 'Zacatecas' en el lista de estados para que tu donativo llegue a nosotros.",
         highlight: true,
-        color: "text-red-500"
+        color: "text-red-700"
     },
     {
         icon: User,
@@ -29,23 +29,23 @@ const steps = [
 
 export const StepList = () => {
     return (
-        <div className="space-y-6 my-8">
+        <div className="flex flex-col justify-evenly h-full gap-[1vh] min-h-0 py-[1vh]">
             {steps.map((step, index) => (
                 <motion.div
                     key={index}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 + 0.3 }}
-                    className="flex items-start gap-4"
+                    className="flex items-center gap-[1.5vh] group min-h-0"
                 >
-                    <div className={`p-2 rounded-xl bg-white/20 shadow-sm ${step.color || 'text-slate-800 dark:text-white'}`}>
-                        <step.icon size={24} />
+                    <div className={`p-[1vh] rounded-xl bg-white/40 shadow-sm shrink-0 ${step.color || 'text-black dark:text-white'}`}>
+                        <step.icon className="w-[clamp(1.2rem,3vh,1.8rem)] h-[clamp(1.2rem,3vh,1.8rem)]" />
                     </div>
-                    <div>
-                        <h3 className={`font-bold text-lg leading-tight ${step.color || 'text-slate-900 dark:text-gray-100'}`}>
+                    <div className="min-w-0 flex-1">
+                        <h3 className={`font-black leading-none ${step.color || 'text-black dark:text-gray-100'} text-[clamp(1rem,2.5vh,1.5rem)]`}>
                             {step.title}
                         </h3>
-                        <p className="text-sm text-slate-600 dark:text-gray-300 leading-snug mt-1">
+                        <p className="text-slate-900 dark:text-gray-200 font-bold leading-tight mt-[0.5vh] line-clamp-2 text-[clamp(0.85rem,2vh,1.1rem)]">
                             {step.description}
                         </p>
                     </div>

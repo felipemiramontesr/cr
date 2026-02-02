@@ -5,7 +5,7 @@ import { Heart } from 'lucide-react';
 
 export const DonationPortal = () => {
     return (
-        <div className="min-h-screen w-full flex flex-col items-center justify-center p-4 relative overflow-hidden">
+        <div className="h-screen w-screen p-[20px] relative overflow-hidden flex flex-col">
             {/* Background Ambience */}
             <div className="fixed inset-0 bg-gradient-to-br from-slate-900 via-red-900/20 to-slate-900 -z-20" />
 
@@ -28,44 +28,57 @@ export const DonationPortal = () => {
             />
 
             {/* Main Content */}
-            <GlassCard className="w-full max-w-lg border-t border-white/30">
-                <div className="text-center mb-8">
-                    <motion.div
-                        initial={{ scale: 0.8, opacity: 0 }}
-                        animate={{ scale: 1, opacity: 1 }}
-                        className="inline-flex items-center justify-center p-3 bg-red-600 rounded-full shadow-lg shadow-red-600/30 mb-4"
-                    >
-                        <Heart className="text-white fill-white" size={32} />
-                    </motion.div>
-                    <h1 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-white">
-                        Cruz Roja Mexicana
-                    </h1>
-                    <p className="text-slate-400 font-medium tracking-widest uppercase text-sm mt-1">
-                        Delegación Zacatecas
-                    </p>
-                </div>
+            <GlassCard className="w-full h-full border-t border-white/30 flex flex-col p-4 md:p-8">
+                <div className="flex-1 flex flex-col h-full overflow-hidden">
 
-                <div className="text-left">
-                    <p className="text-slate-300 text-sm mb-2 font-medium">
-                        Sigue estos pasos para tu donativo:
-                    </p>
-                    <StepList />
-                </div>
+                    {/* Header: Pegado Arriba */}
+                    <div className="text-center shrink-0 mb-1 md:mb-2">
+                        <motion.div
+                            initial={{ scale: 0.8, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            className="inline-flex items-center justify-center p-[1.5vh] max-h-[10vh] aspect-square bg-red-700 rounded-full shadow-lg shadow-red-900/40 mb-[1vh]"
+                        >
+                            <Heart className="text-white fill-white w-[4vh] h-[4vh]" />
+                        </motion.div>
+                        <h1 className="font-bold text-red-700 text-[clamp(1.5rem,4vh,2.5rem)] leading-tight">
+                            Cruz Roja Mexicana
+                        </h1>
+                        <p className="text-slate-900 font-bold tracking-widest uppercase mt-[0.5vh] text-[clamp(0.75rem,1.5vh,1rem)]">
+                            Delegación Zacatecas
+                        </p>
+                    </div>
 
-                <motion.a
-                    href="https://www.cruzrojamexicana.org.mx/donacion/266"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="block w-full text-center bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white font-bold py-4 rounded-xl shadow-lg shadow-red-900/50 transition-all text-lg tracking-wide border border-white/10"
-                >
-                    Ir a Donar
-                </motion.a>
+                    {/* Body: Ocupa todo el espacio central disponible */}
+                    <div className="flex-1 flex flex-col justify-between min-h-0 my-[1vh]">
+                        <p className="text-slate-900 font-bold text-center md:text-left shrink-0 text-[clamp(0.9rem,2vh,1.1rem)]">
+                            Sigue estos pasos para tu donativo:
+                        </p>
 
-                <p className="text-xs text-center text-slate-500 mt-6">
-                    Tu donativo salva vidas. Gracias por ayudar.
-                </p>
+                        {/* La lista crecerá lo que necesite */}
+                        <div className="flex-1 flex flex-col min-h-0">
+                            <StepList />
+                        </div>
+                    </div>
+
+                    {/* Footer: Pegado Abajo */}
+                    <div className="shrink-0 mt-[1vh]">
+                        <motion.a
+                            href="https://www.cruzrojamexicana.org.mx/donacion/266"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            whileHover={{ scale: 1.02 }}
+                            whileTap={{ scale: 0.98 }}
+                            className="block w-full text-center bg-gradient-to-r from-red-700 to-red-800 hover:from-red-600 hover:to-red-700 text-white font-bold rounded-xl shadow-lg shadow-red-900/50 transition-all tracking-wide border border-white/10
+                            py-[clamp(0.75rem,2vh,1.5rem)] text-[clamp(1rem,2.2vh,1.5rem)]"
+                        >
+                            Ir a Donar
+                        </motion.a>
+
+                        <p className="text-center text-slate-800 font-bold mt-[1.5vh] text-[clamp(0.7rem,1.5vh,0.9rem)]">
+                            Tu donativo salva vidas. Gracias por ayudar.
+                        </p>
+                    </div>
+                </div >
             </GlassCard>
         </div>
     );

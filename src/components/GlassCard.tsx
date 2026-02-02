@@ -20,7 +20,6 @@ export const GlassCard = ({ children, className = '' }: GlassCardProps) => {
         shadow-2xl shadow-black/10
         rounded-2xl
         p-6 md:p-8
-        max-w-md w-full mx-auto
         ${className}
       `}
         >
