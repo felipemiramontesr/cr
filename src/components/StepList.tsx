@@ -10,7 +10,7 @@ const steps = [
     },
     {
         icon: MapPin,
-        title: "Selecciona: ZACATECAS",
+        title: "Selecciona: Delegación ZACATECAS",
         description: "Es CRUCIAL seleccionar ZACATECAS.",
         highlight: true,
         color: "text-red-700"
