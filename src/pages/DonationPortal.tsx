@@ -1,7 +1,7 @@
 import { GlassCard } from '../components/GlassCard';
 import { StepList } from '../components/StepList';
 import { motion } from 'framer-motion';
-import { Heart } from 'lucide-react';
+import cruzRojaLogo from '../assets/cruz-roja.svg';
 
 export const DonationPortal = () => {
     return (
@@ -36,9 +36,13 @@ export const DonationPortal = () => {
                         <motion.div
                             initial={{ scale: 0.8, opacity: 0 }}
                             animate={{ scale: 1, opacity: 1 }}
-                            className="inline-flex items-center justify-center p-[1.5vh] max-h-[10vh] aspect-square bg-red-700 rounded-full shadow-lg shadow-red-900/40 mb-[1vh]"
+                            className="inline-flex items-center justify-center mb-[1vh]"
                         >
-                            <Heart className="text-white fill-white w-[4vh] h-[4vh]" />
+                            <img
+                                src={cruzRojaLogo}
+                                alt="Logo Cruz Roja Mexicana"
+                                className="h-[8vh] w-auto object-contain drop-shadow-lg"
+                            />
                         </motion.div>
                         <h1 className="font-bold text-red-700 text-[clamp(1.5rem,4vh,2.5rem)] leading-tight">
                             Cruz Roja Mexicana
