@@ -5,13 +5,13 @@ const steps = [
     {
         icon: MapPin,
         title: "Sitio Web Nacional",
-        description: "Serás redirigido al portal oficial, pero primero verás un selector de estados.",
+        description: "Serás redirigido al portal oficial, pero primero verás un selector.",
         highlight: true
     },
     {
         icon: MapPin,
         title: "Selecciona: ZACATECAS",
-        description: "Es CRUCIAL seleccionar 'Zacatecas' en el lista de estados para que tu donativo llegue a nosotros.",
+        description: "Es CRUCIAL seleccionar ZACATECAS.",
         highlight: true,
         color: "text-red-700"
     },
