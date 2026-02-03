@@ -1,9 +1,7 @@
-import { DonationPortal } from './pages/DonationPortal'
+import { DonationPortal } from './pages/DonationPortal';
 
 function App() {
-  return (
-    <DonationPortal />
-  )
+  return <DonationPortal />;
 }
 
-export default App
+export default App;

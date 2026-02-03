@@ -2,17 +2,17 @@ import { motion } from 'framer-motion';
 import type { ReactNode } from 'react';
 
 interface GlassCardProps {
-    children: ReactNode;
-    className?: string;
+  children: ReactNode;
+  className?: string;
 }
 
 export const GlassCard = ({ children, className = '' }: GlassCardProps) => {
-    return (
-        <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className={`
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className={`
         relative overflow-hidden
         bg-white/10 dark:bg-black/20
         backdrop-blur-xl
@@ -22,11 +22,11 @@ export const GlassCard = ({ children, className = '' }: GlassCardProps) => {
         p-6 md:p-8
         ${className}
       `}
-        >
-            {/* Glossy overlay effect */}
-            <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent pointer-events-none" />
+    >
+      {/* Glossy overlay effect */}
+      <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent pointer-events-none" />
 
-            {children}
-        </motion.div>
-    );
+      {children}
+    </motion.div>
+  );
 };
