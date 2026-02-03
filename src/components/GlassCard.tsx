@@ -32,11 +32,11 @@ export const GlassCard = ({ children, className = '' }: GlassCardProps) => {
       <img
         src={cruzRojaLogo}
         alt=""
-        className="absolute top-0 -right-7 md:-right-10 w-40 md:w-60 h-auto opacity-10 pointer-events-none brightness-0 invert"
+        className="absolute -top-3 -right-12 md:-top-5 md:-right-20 w-56 md:w-80 h-auto opacity-10 pointer-events-none brightness-0 invert"
       />
 
-      {/* Heart Watermark */}
-      <Heart className="absolute bottom-4 left-4 w-6 h-6 md:w-8 md:h-8 text-white fill-white opacity-10 pointer-events-none" />
+      {/* Heart Watermark (Desktop Only) */}
+      <Heart className="hidden md:block absolute bottom-5 left-4 w-8 h-8 text-white fill-white opacity-10 pointer-events-none" />
 
       {children}
     </motion.div>

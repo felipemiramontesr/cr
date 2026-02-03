@@ -77,9 +77,14 @@ export const DonationPortal = () => {
               Ir a Donar
             </motion.a>
 
-            <p className="text-center text-slate-800 font-bold mt-[1.5vh] text-[clamp(0.7rem,1.5vh,0.9rem)]">
-              Tu donativo salva vidas. Gracias por ayudar.
-            </p>
+            <div className="flex items-center justify-center w-full mt-[1.5vh] gap-3">
+              {/* Mobile Heart Watermark (Inline for alignment) */}
+              <Heart className="md:hidden w-5 h-5 text-white fill-white opacity-10 pointer-events-none shrink-0" />
+
+              <p className="text-center text-slate-800 font-bold text-[clamp(0.6rem,1.4vh,0.9rem)] whitespace-nowrap">
+                Tu donativo salva vidas. Gracias por ayudar.
+              </p>
+            </div>
           </div>
         </div>
       </GlassCard>
