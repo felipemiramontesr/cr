@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import type { ReactNode } from 'react';
-import cruzRojaLogo from '../assets/cruz-roja.svg';
+import cruzRojaLogo from '../assets/cruz-roja-transparent.svg';
 import { Heart } from 'lucide-react';
 
 interface GlassCardProps {
